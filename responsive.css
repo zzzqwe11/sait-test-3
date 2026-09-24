@@ -1,0 +1,168 @@
+/* =========================================================
+   RESPONSIVE.CSS — адаптив для всех страниц
+   ========================================================= */
+
+
+/* =========================================
+   Планшет / маленький ноутбук (до 1000px)
+========================================= */
+
+@media (max-width: 1000px) {
+
+    /* Скрываем основное меню — на мобильных открывается бургером */
+    .nav {
+        display: none;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    /* Отступы секций */
+    .section {
+        padding: 80px 5%;
+    }
+
+    /* Одноколоночная вёрстка для крупных секций */
+    .about-preview,
+    .about-page,
+    .contacts,
+    .captain-page,
+    .boat-detail {
+        grid-template-columns: 1fr;
+    }
+
+    /* Сетки */
+    .activities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .boats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Галерея клиентов */
+    .client-gallery {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+
+    .client-gallery img {
+        height: 300px;
+    }
+
+    /* Футер */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Галерея — 2 колонки */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Личный кабинет */
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   Мобильные (до 600px)
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Hero */
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .hero-content {
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Заголовки секций */
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading .text-link {
+        margin-top: 25px;
+    }
+
+    /* Сетки */
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        height: 400px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 400px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Карточки катеров */
+    .boat-image {
+        height: 400px;
+    }
+
+    /* ВАЖНО:
+       раньше тут было .boat-main-image { height: 400px; }
+       Оно ломало новую вёрстку карточек из boats.css.
+       Убрано намеренно. */
+
+    /* Активности */
+    .activity-large > div {
+        padding: 50px 30px;
+    }
+
+    .activity-large h2 {
+        font-size: 50px;
+    }
+
+    /* Цифры */
+    .numbers {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* Авторизация */
+    .auth-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    /* Личный кабинет */
+    .profile-header {
+        display: block;
+    }
+
+    .profile-header .btn {
+        margin-top: 30px;
+    }
+
+}
